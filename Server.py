@@ -14,6 +14,7 @@ while True:
     connection.send(bytes(data, 'utf-8'))
     print('_')
 
-    
+    recData = connection.recv(1024).decode()
+    print('client', recData)
 
 connection.close()
