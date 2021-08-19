@@ -8,3 +8,12 @@ print('server is listening at 12000')
 connection, address =  server.accept()
 print('server accepted request!')
 
+while True:
+    
+    data = input('server:')
+    connection.send(bytes(data, 'utf-8'))
+    print('_')
+
+    
+
+connection.close()
